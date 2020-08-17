@@ -3,13 +3,13 @@
 <head>
 <title>Legal Match - Find the right lawyer now</title>
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/bootstrap.css">
-<script src="js/bootstrap.js"></script>
+<!--link rel="stylesheet" href="css/bootstrap.css" -->
+
 </head>
 <body>
 <header>
     <div id="header-logo">
-        <img src="">
+        <a href="#"><img src="images/header-logo.png" alt="LegalMatch"></a>
     </div>
     <div id="header-text">
         <ul>
@@ -27,29 +27,85 @@
     </section>
     <section id="form-selection">
         <form>
+            <div class="text-with-icon">
             <h3>Enter Zip Code or City:</h3>
-            <div class="input-icons">
             <input type="text" placeholder="Does not have to be where you live">
-            <i class="number-1-icon" aria-hidden="true"></i>
+            <i class="image-1" aria-hidden="true"></i>
             </div>
-            <h3>Choose a category:</h3>
-            <div class="input-icons">
-            <select name="legal-catergory" id="legal-catergory">
-                <option>Family</option>
-                <option>Criminal Defense</option>
-                <option>Business</option>
-                <option>Personal Injury</option>
-                <option>Bankruptcy & Finances</option>
-                <option>Products & Services</option>
-                <option>Employment</option>
-                <option>Real Estate</option>
-                <option>Immigration</option>
-                <option>Wills, Trusts & Estates</option>
-                <option>Government</option>
-                <option>Intellectual Property</option>
-            </select>
-            <i class="number-1-icon" aria-hidden="true"></i>
-            </div>
+            <div class="container">
+                <h3>Choose a category:</h3>
+          
+                <div class="select-box">
+                  <div class="options-container">
+                    <div class="option">
+                      <input type="radio" class="radio" id="family" name="category" />
+                      <label for="family">Family</label>
+                    </div>
+          
+                    <div class="option">
+                      <input type="radio" class="radio" id="criminal-defense" name="category" />
+                      <label for="criminal-defense">Criminal Defense</label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="business" name="category" />
+                        <label for="business">Business</label>
+                      </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="personal-injury" name="category" />
+                        <label for="personal-injury">Personal Injury</label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="bankruptcy-finances" name="category" />
+                        <label for="bankruptcy-finances">Bankruptcy & Finances</label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="products-services" name="category" />
+                        <label for="products-services">Products & Services</label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="employment" name="category" />
+                        <label for="employment">Employment</label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="real-estate" name="category" />
+                        <label for="real-estate">Real Estate</label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="immigration" name="category" />
+                        <label for="immigration">Immigration</label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="wills-trusts-estates" name="category" />
+                        <label for="wills-trusts-estates">Wills, Trusts & Estates</label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="government" name="category" />
+                        <label for="government">Government</label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="intellectual-property" name="category" />
+                        <label for="intellectual-property">Intellectual Property</label>
+                    </div>
+
+                  </div>
+          
+                  <div class="selected">
+                    Click to choose a legal category
+                  </div>
+                </div>
+              </div>
+
+
         </form>
     </section>
     <section id="lawyers-lists-review">
@@ -60,7 +116,7 @@
 
 <footer>
     <div id="logo-footer" class="footer-section">
-        <img src="" width="250" height="100">
+        <img src="images/footer-logo.png" alt="LegalMatch">
     </div>
     <div id="middle-footer" class="footer-section">
         <nav>
@@ -69,12 +125,15 @@
                 <li>Privacy Policy</li>
                 <li>Site Map</li>
             </ul>
+            Copyright 1999-2016 LegalMatch. All rights reserved. Legalmatch &reg;,<br /> the LegalMatch logo, and the tradedress are trademarks of LegalMatch. Patents Pending.
         </nav>
     </div>
     <div id="certifications" class="footer-section">
-        <img src="" width="200" height="100">
-        <img src="" width="200" height="100">
+        <img src="images/icons-footer-01.png" alt="TRUSTe Verified">
+        <img src="images/icons-footer-02.png" alt="BBB Rating A+">
     </div>
 </footer>
+
+<script src="js/scripts.js"></script>
 </body>
 </html>

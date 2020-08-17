@@ -1,48 +1,226 @@
+@font-face {
+    font-family: 'Gotham-light';
+    src: url(./fonts/Gotham-Light.otf);
+  }
+
+@font-face {
+    font-family: 'Gotham-book';
+    src: url(./fonts/Gotham-Book.otf);
+  }
+  
+  @font-face {
+    font-family: 'Gotham-medium';
+    src: url(./fonts/Gotham-Medium.otf);
+  }
+  
+h1 {
+    font-family: 'Gotham-light';
+    font-size: 42px;
+    font-weight: lighter;
+}
+
+h2 {
+    font-family: 'Gotham-medium';
+}
+
 body {
+    font-family: 'Gotham-book';
     margin:0px;
 }
+
+#header-logo {
+    float: left;
+    width: 70%;
+}
+
+#header-text {
+    float: left;
+    width: 30%;
+}
+
+header, footer {
+    padding: 20px 10% 10px 10%;
+}
+
+header ul {
+    list-style-image: url('../images/check.png');
+}
+
 #main-content {
+    clear: both;
     padding: 10%;
     min-height: 20px;
+    background-image: url('../images/main-container-bg.png');
+    background-size: cover;
+    color:#ffffff;
 }
 
-select, input {
-    padding: 10px 10px;
-    border-radius: 25px;
-    outline: none;
-    border: 1px solid #000000;
-}
 
-option {
-    border-radius: 25px;
-    margin-top:20px;
-}
+/*Custom Form */
 
-.input-icons {
+.text-with-icon {
     position: relative;
 }
-.input-icons i {
+
+.text-with-icon input[type=text] {
+    padding-left: 60px;
+}
+
+.text-with-icon i{
     position: absolute;
-    left: 10px;
-    top: 11px;
-    padding: 3px 3px;
+    left: 15px;
+    top: 48px;
 }
 
-.number-1-icon input[type="text"]:focus + i {
-    color: #089084;
+input {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 14px 20px;
+    border:none;
+    outline: none;
+    min-width: 320px;
+}
+
+.image-1 {
+    background: url("../images/1.png");
+    width:30px;
+    height:30px;
+}
+
+input:hover, input:active {
+    -webkit-box-shadow: 0px 0px 17px -1px rgba(255,255,255,0.7);
+    -moz-box-shadow: 0px 0px 17px -1px rgba(255,255,255,0.7);
+    box-shadow: 0px 0px 17px -1px rgba(255,255,255,0.7);
+}
+
+.select-box {
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+  }
+  
+  .select-box .options-container {
+    background: #ffffff;
+    color: #2f3640;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    border-radius: 13px;
+    overflow: hidden;
+  
+    order: 1;
+  }
+  
+  .selected {
+    background: #ffffff;
     border-radius: 25px;
-}
+    margin-bottom: 5px;
+    color: #000000;
+    position: relative;
+    order: 0;
+  }
 
-.number-1-icon {
-    background-image: url('../images/one-image.png');
-    width: 10px;
-    height: 10px;
-}
+  .selected:active, .selected:hover {
+    -webkit-box-shadow: 0px 0px 17px -1px rgba(255,255,255,0.7);
+    -moz-box-shadow: 0px 0px 17px -1px rgba(255,255,255,0.7);
+    box-shadow: 0px 0px 17px -1px rgba(255,255,255,0.7);
+    }
+
+  .selected::before {
+    content: "";
+    background: url("../images/2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  
+    position: absolute;
+    height: 100%;
+    width: 31px;
+    left: 15px;
+    top: 10px;
+  
+    transition: all 0.4s;
+  }
+  
+  .selected::after {
+    content: "";
+    background: url("../images/arrow.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  
+    position: absolute;
+    height: 100%;
+    width: 16px;
+    right: 20px;
+    top: 20px;
+  
+    transition: all 0.4s;
+  }
+  
+  .select-box .options-container.active {
+    padding: 20px;
+    max-height: 100%;
+    max-width: 355px;
+    opacity: 1;
+    -webkit-box-shadow: 0px 8px 17px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 8px 17px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 8px 17px -1px rgba(0,0,0,0.75);
+  }
+  
+  .select-box .options-container.active + .selected::after {
+    transform: rotateX(180deg);
+    top: -22px;
+  }
+  
+  .select-box .options-container::-webkit-scrollbar {
+    width: 8px;
+    background: #0d141f;
+    border-radius: 0 8px 8px 0;
+  }
+  
+  .select-box .options-container::-webkit-scrollbar-thumb {
+    background: #bcd3e3;
+    border-radius: 0 8px 8px 0;
+  }
+  
+  .selected {
+    padding: 16px 0px 16px 65px;
+    cursor: pointer;      
+  }
+
+  .select-box .option
+   {
+    padding: 5px 50px;
+    cursor: pointer;
+  }
+  
+  .select-box .option:hover {
+    background: #bcd3e3;
+  }
+  
+  .select-box label {
+    cursor: pointer;
+  }
+  
+  .select-box .option .radio {
+    display: none;
+  }
+
 
 /* Footer */
+#middle-footer {
+    text-align: center;
+}
+#middle-footer li {
+    display: inline;
+    padding:20px;
+}
 .footer-section {
     float: left;
     width: 25%;
+    font-family: 'Gotham-light';
+    font-size: 14px;
+    color:#929ba4;
 }
 
 .footer-section:nth-child(2) {
