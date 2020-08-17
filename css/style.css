@@ -2,11 +2,42 @@ body {
     margin:0px;
 }
 #main-content {
-    background-color: blue;
     padding: 10%;
     min-height: 20px;
 }
 
+select, input {
+    padding: 10px 10px;
+    border-radius: 25px;
+    outline: none;
+    border: 1px solid #000000;
+}
+
+option {
+    border-radius: 25px;
+    margin-top:20px;
+}
+
+.input-icons {
+    position: relative;
+}
+.input-icons i {
+    position: absolute;
+    left: 10px;
+    top: 11px;
+    padding: 3px 3px;
+}
+
+.number-1-icon input[type="text"]:focus + i {
+    color: #089084;
+    border-radius: 25px;
+}
+
+.number-1-icon {
+    background-image: url('../images/one-image.png');
+    width: 10px;
+    height: 10px;
+}
 
 /* Footer */
 .footer-section {
