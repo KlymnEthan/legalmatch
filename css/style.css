@@ -1,0 +1,19 @@
+body {
+    margin:0px;
+}
+#main-content {
+    background-color: blue;
+    padding: 10%;
+    min-height: 20px;
+}
+
+
+/* Footer */
+.footer-section {
+    float: left;
+    width: 25%;
+}
+
+.footer-section:nth-child(2) {
+    width:50%;
+}
