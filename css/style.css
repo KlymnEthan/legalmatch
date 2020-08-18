@@ -12,6 +12,11 @@
     font-family: 'Gotham-medium';
     src: url(./fonts/Gotham-Medium.otf);
   }
+
+  @font-face {
+    font-family: 'Gotham-italic-light';
+    src: url(./fonts/Gotham-LightIta.otf);
+  }
   
 h1 {
     font-family: 'Gotham-light';
@@ -21,15 +26,23 @@ h1 {
 }
 
 h2 {
-    font-family: 'Gotham-medium';
-    font-weight: 100;
+    font-family: 'Gotham-book';
+    font-weight: 500;
     margin: 10px 0 40px;
+    font-size:32px;
 }
 
 h3 {
+    font-family: 'Gotham-book';
     font-weight: 600;
     margin:40px 0px 10px;
-    font-size: 16px;
+    font-size: 15px;
+}
+
+h4 {
+    font-weight: 200;
+    margin:0px 0px 10px;
+    font-size: 20px;
 }
 
 body {
@@ -110,6 +123,7 @@ header ul {
 #lawyers-lists-review {
     float: left;
     width: 40%;
+    padding-bottom: 40px;
 }
 
 .text-with-icon {
@@ -127,16 +141,16 @@ color: #ffffff;
 .text-with-icon i{
     position: absolute;
     left: 15px;
-    top: 76px;
+    top: 82px;
 }
 
 input {
     background: #ffffff;
-    border-radius: 20px;
-    padding: 14px 20px;
-    border:none;
+    border-radius: 30px;
+    padding: 22px 20px;
+    border: none;
     outline: none;
-    min-width: 320px;
+    min-width: 450px;
 }
 
 .image-1 {
@@ -161,7 +175,7 @@ input:hover, input:active {
     background: #ffffff;
     color: #2f3640;
     max-height: 0;
-    width: 100%;
+    width: 480px;
     opacity: 0;
     transition: all 0.4s;
     border-radius: 13px;
@@ -172,11 +186,12 @@ input:hover, input:active {
   
   .selected {
     background: #ffffff;
-    border-radius: 25px;
+    border-radius: 30px;
     margin-bottom: 5px;
     color: #000000;
     position: relative;
     order: 0;
+    width: 465px;
   }
 
   .selected:active, .selected:hover {
@@ -195,7 +210,7 @@ input:hover, input:active {
     height: 100%;
     width: 31px;
     left: 15px;
-    top: 10px;
+    top: 15px;
   
     transition: all 0.4s;
   }
@@ -210,7 +225,7 @@ input:hover, input:active {
     height: 100%;
     width: 16px;
     right: 20px;
-    top: 20px;
+    top: 29px;
   
     transition: all 0.4s;
   }
@@ -218,7 +233,6 @@ input:hover, input:active {
   .select-box .options-container.active {
     padding: 20px;
     max-height: 100%;
-    max-width: 355px;
     opacity: 1;
     -webkit-box-shadow: 0px 8px 17px -1px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 8px 17px -1px rgba(0,0,0,0.75);
@@ -227,7 +241,7 @@ input:hover, input:active {
   
   .select-box .options-container.active + .selected::after {
     transform: rotateX(180deg);
-    top: -22px;
+    top: -27px;
   }
   
   .select-box .options-container::-webkit-scrollbar {
@@ -242,7 +256,7 @@ input:hover, input:active {
   }
   
   .selected {
-    padding: 16px 0px 16px 65px;
+    padding: 22px 0px 22px 65px;
     cursor: pointer;      
   }
 
@@ -264,6 +278,54 @@ input:hover, input:active {
     display: none;
   }
 
+  .cant-find {
+      text-align: center;
+      padding: 20px 0px 40px 0px;
+      width: 520px;
+  }
+
+  .cant-find a {
+    text-decoration-style:dotted;
+      color: #ffffff;
+  }
+
+  .lawyers-photo {
+      clear: both;
+      float:left;
+      width: 20%;
+      font-size: 12px;
+      font-weight: 200;
+      text-align: center;
+  }
+
+  article a {
+    font-family:'Gotham-book';
+      float: left;
+      width: 80%;
+      display: block;
+      text-align: right;
+      color:#fbd243;
+      text-decoration: none;
+      font-weight: 500;
+      margin-top: 10px;
+
+  }
+
+  .title {
+      font-weight: 600;
+      padding-right: 10px;
+      font-size: 12px;
+  }
+
+  .article-content {
+      font-family:'Gotham-italic-light';
+      font-weight: 400;
+      font-size: 12px;
+      padding:10px 0px 20px 0px;
+  }
+
+
+
 
 /* Footer */
 
@@ -272,7 +334,7 @@ input:hover, input:active {
 }
 #middle-footer li {
     display: inline;
-    padding:20px;
+    padding:20px 10px;
 }
 
 #middle-footer li a {
@@ -296,3 +358,41 @@ input:hover, input:active {
 #certifications {
     text-align: right;
 }
+
+#certifications img {
+    padding-bottom: 15px;
+}
+
+@media only screen and (max-width: 1150px) {
+    #form-selection {
+      clear: both;
+      width: 100%;
+    }
+    #main-content {
+        clear: both;
+        padding: 40px 20% 40px 10%;
+    }
+    #lawyers-lists-review {
+        width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 656px) {
+    #form-selection {
+        clear: both;
+        width: 400px;
+      }
+      #main-content {
+          clear: both;
+          padding: 40px 20% 40px 10%;
+      }
+      .selected, .select-box {
+          width: 320px;
+      }
+      input {
+        min-width: 310px;
+      }
+      #lawyers-lists-review {
+          width: 100%;
+      }
+  }
